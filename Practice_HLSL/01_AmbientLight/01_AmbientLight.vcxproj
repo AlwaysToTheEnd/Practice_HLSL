@@ -99,6 +99,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./; ../Common/;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -141,14 +145,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Common\d3dApp.h" />
-    <ClInclude Include="..\Common\GameTimer.h" />
-    <ClInclude Include="AmbientLight.h" />
+    <ClInclude Include="..\Common\DeviceResources.h" />
+    <ClInclude Include="..\Common\pch.h" />
+    <ClInclude Include="..\Common\StepTimer.h" />
+    <ClInclude Include="PracticeHLSL.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Common\d3dApp.cpp" />
-    <ClCompile Include="..\Common\GameTimer.cpp" />
-    <ClCompile Include="AmbientLight.cpp" />
+    <ClCompile Include="..\Common\DeviceResources.cpp" />
+    <ClCompile Include="..\Common\Main.cpp" />
+    <ClCompile Include="..\Common\pch.cpp" />
+    <ClCompile Include="PracticeHLSL.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
